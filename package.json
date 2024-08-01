@@ -1,14 +1,23 @@
 {
   "name": "react-use-facebook-pixel",
   "version": "1.0.1",
-  "description": "",
+  "description": "Typed wrapper around Facebook Pixel",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geneloper/react-use-facebook-pixel.git"
+  },
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "facebook",
+    "pixel",
+    "react",
+    "tracking"
+  ],
+  "author": "Eugene Medvedev",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "devDependencies": {
