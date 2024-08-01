@@ -17,6 +17,10 @@ Install the package via npm or yarn:
 npm install react-use-facebook-pixel
 ```
 
+```bash
+yarn add react-use-facebook-pixel
+```
+
 ## Usage
 
 ### Initialization
@@ -34,7 +38,7 @@ const useFacebookPixel = () => {
   useEffect(() => {
     const initializeFacebookPixel = async () => {
       const pixel = new FacebookPixel({
-        pixelID: 'PIXEL_ID'
+        pixelID: 'PIXEL_ID',
       });
 
       pixel.init({});
@@ -49,7 +53,6 @@ const useFacebookPixel = () => {
 };
 
 export default useFacebookPixel;
-
 ```
 
 ### Tracking Events
@@ -57,12 +60,9 @@ export default useFacebookPixel;
 Track simple events
 
 ```javascript
-pixel.trackEvent(
-  'ViewContent',
-  {
-    content_ids: ['1234'],
-  }
-);
+pixel.trackEvent('ViewContent', {
+  content_ids: ['1234'],
+});
 ```
 
 Track events with optional data and additional information:
