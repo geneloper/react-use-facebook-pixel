@@ -15,7 +15,9 @@
     "facebook",
     "pixel",
     "react",
-    "tracking"
+    "tracking",
+    "typescript",
+    "eventID"
   ],
   "author": "Eugene Medvedev",
   "main": "dist/index.js",
