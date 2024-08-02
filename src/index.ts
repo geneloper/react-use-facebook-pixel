@@ -26,6 +26,10 @@ class FacebookPixel {
     this.initialized = true;
     window.fbq('set', 'autoConfig', this.autoConfig, this.pixelID);
     window.fbq('init', this.pixelID, props);
+    if (props.external_id) {
+      this.externalId = props.external_id;
+    }
+
     if (this.pageViewOnInit) {
       this.trackEvent('PageView');
     }
@@ -37,10 +41,6 @@ class FacebookPixel {
         'Facebook Pixel initialized'
       );
     }
-  }
-
-  setExternalId(externalId: string) {
-    this.externalId = externalId;
   }
 
   getExternalId() {
