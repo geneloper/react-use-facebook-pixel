@@ -83,6 +83,24 @@ pixel.trackEvent(
 );
 ```
 
+Or use types for events & events data:
+
+```javascript
+import { AdditionalEventData, EventData, TrackableEventNameEnum } from 'react-use-facebook-pixel';
+
+const eventData: EventData[TrackableEventNameEnum.Purchase] = {
+  content_ids: ['21312'],
+  currency: 'USD',
+  value: 1
+};
+
+const additionalEventData: AdditionalEventData = {
+  eventID: 'd2e6f4f5-8b43-4d4e-bd45-9d9e5e6b2d9a'
+};
+
+facebookPixel.trackEvent(TrackableEventNameEnum.Purchase, eventData, additionalEventData);
+```
+
 ### Available Events
 
 - `AddPaymentInfo`
@@ -124,7 +142,7 @@ new FacebookPixel(props: Props)
 - `init(props: InitProps)`: Initializes the Facebook Pixel with optional properties.
 - `setExternalId(externalId: string)`: Sets an external ID for tracking.
 - `getExternalId()`: Retrieves the current external ID.
-- `trackEvent<K extends TrackableEventName>(eventName: K, data?: TrackableEventData[K], additionalData?: AdditionalData)`: Tracks an event with optional data and additional information.
+- `trackEvent<K extends TrackableEventName>(eventName: K, data?: EventData[K], additionalData?: AdditionalEventData)`: Tracks an event with optional data and additional information.
 
 ## Configuration Options
 
