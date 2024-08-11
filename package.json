@@ -8,8 +8,9 @@
     "url": "https://github.com/geneloper/react-use-facebook-pixel.git"
   },
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch"
+    "build": "tsc && npm run minify",
+    "dev": "tsc --watch",
+    "minify": "terser dist/index.js --compress --mangle --output dist/index.min.js"
   },
   "keywords": [
     "facebook",
@@ -20,11 +21,10 @@
     "eventID"
   ],
   "author": "Eugene Medvedev",
-  "main": "dist/index.js",
+  "main": "dist/index.min.js",
   "types": "dist/index.d.ts",
   "devDependencies": {
     "@types/node": "^22.0.2",
-    "@types/react": "^18.3.3",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "eslint": "^8.57.0",
@@ -32,6 +32,7 @@
     "eslint-plugin-prettier": "^5.2.1",
     "prettier": "^3.3.3",
     "prettier-eslint": "^16.3.0",
+    "terser": "^5.31.5",
     "typescript": "^5.5.4"
   }
 }

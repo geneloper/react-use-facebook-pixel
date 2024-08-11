@@ -142,7 +142,7 @@ interface ViewContentData {
 
 interface PageViewData {}
 
-type TrackableEventData = {
+type EventData = {
   AddPaymentInfo: AddPaymentInfoData;
   AddToCart: AddToCartData;
   AddToWishlist: AddToWishlistData;
@@ -163,9 +163,9 @@ type TrackableEventData = {
   PageView: PageViewData;
 };
 
-type TrackableEventName = keyof TrackableEventData;
+type TrackableEventName = keyof EventData;
 
-interface AdditionalData {
+interface AdditionalEventData {
   /**
    * Event ID
    *
@@ -295,4 +295,4 @@ interface InitProps {
   country?: string;
 }
 
-export type { TrackableEventName, TrackableEventData, AdditionalData, Props, InitProps };
+export type { TrackableEventName, EventData, AdditionalEventData, Props, InitProps };

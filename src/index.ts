@@ -1,5 +1,5 @@
 import connectionScript from './connection';
-import { AdditionalData, InitProps, Props, TrackableEventData, TrackableEventName } from './types';
+import { AdditionalEventData, InitProps, Props, EventData, TrackableEventName } from './types';
 import { TrackableEventNameEnum } from './enums';
 
 class FacebookPixel {
@@ -49,8 +49,8 @@ class FacebookPixel {
 
   trackEvent<K extends TrackableEventName>(
     eventName: K,
-    data?: TrackableEventData[K],
-    additionalData?: AdditionalData
+    data?: EventData[K],
+    additionalData?: AdditionalEventData
   ) {
     if (!this.initialized && this.debug) {
       console.error(
@@ -79,4 +79,4 @@ class FacebookPixel {
   }
 }
 
-export { FacebookPixel, TrackableEventNameEnum };
+export { FacebookPixel, TrackableEventNameEnum, EventData, AdditionalEventData };
