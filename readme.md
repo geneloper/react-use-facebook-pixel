@@ -32,21 +32,27 @@ Create an instance of `FacebookPixel` and initialize it with your pixel ID:
 import { useEffect, useState } from 'react';
 import { FacebookPixel } from 'react-use-facebook-pixel';
 
+// to prevent pixel reinitialization on every rerender
+let facebookPixelSingleton: FacebookPixel | null = null;
 const useFacebookPixel = () => {
   const [facebookPixel, setFacebookPixel] = useState<FacebookPixel | null>(null);
 
   useEffect(() => {
-    const initializeFacebookPixel = async () => {
-      const pixel = new FacebookPixel({
-        pixelID: 'PIXEL_ID',
-      });
+    if (!facebookPixelSingleton) {
+      const initializeFacebookPixel = async () => {
+        const pixel = new FacebookPixel({
+          pixelID: 'PIXEL_ID',
+        });
 
-      pixel.init({});
+        pixel.init({});
+        pixel.trackEvent('PageView');
 
-      setFacebookPixel(pixel);
-    };
+        facebookPixelSingleton = pixel;
+        setFacebookPixel(pixel);
+      };
 
-    initializeFacebookPixel();
+      initializeFacebookPixel();
+    }
   }, []);
 
   return facebookPixel;
