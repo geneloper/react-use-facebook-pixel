@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/geneloper/react-use-facebook-pixel.git"
+    "url": "git+https://github.com/geneloper/react-use-facebook-pixel.git"
   },
   "type": "module",
   "main": "dist/index.cjs.js",
