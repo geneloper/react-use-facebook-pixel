@@ -9,6 +9,10 @@
 - **Debug Mode**: Optional debug mode to log initialization and event tracking information.
 - **Customizable Configuration**: Set external IDs, configure automatic tracking, and more.
 
+## Chat
+
+- **Telegram**: https://t.me/react_use_facebook_pixel
+
 ## Installation
 
 Install the package via npm or yarn:
