@@ -1,7 +1,7 @@
 {
   "name": "react-use-facebook-pixel",
   "version": "1.0.6",
-  "description": "Typed wrapper around Facebook Pixel",
+  "description": "Type-safe wrapper for integrating Facebook Pixel",
   "license": "MIT",
   "repository": {
     "type": "git",
