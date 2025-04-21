@@ -7,6 +7,7 @@
     "type": "git",
     "url": "https://github.com/geneloper/react-use-facebook-pixel.git"
   },
+  "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -35,6 +36,7 @@
     "prettier-eslint": "^16.3.0",
     "terser": "^5.31.5",
     "typescript": "^5.5.4",
-    "vite": "^6.3.2"
+    "vite": "^6.3.2",
+    "vite-plugin-dts": "^4.5.3"
   }
 }
