@@ -79,4 +79,4 @@ class FacebookPixel {
   }
 }
 
-export { FacebookPixel, TrackableEventNameEnum, EventData, AdditionalEventData };
+export { FacebookPixel, TrackableEventNameEnum };
