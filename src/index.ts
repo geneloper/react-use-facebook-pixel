@@ -24,8 +24,10 @@ class FacebookPixel {
       return;
     }
     this.initialized = true;
+
     window.fbq('set', 'autoConfig', this.autoConfig, this.pixelID);
     window.fbq('init', this.pixelID, props);
+
     if (props.external_id) {
       this.externalId = props.external_id;
     }
@@ -72,7 +74,7 @@ class FacebookPixel {
         eventName,
         '\nEvent data: ',
         data,
-        '\nEvent additiona data',
+        '\nEvent additional data',
         additionalData
       );
     }
@@ -80,5 +82,6 @@ class FacebookPixel {
 }
 
 export { FacebookPixel, TrackableEventNameEnum };
+export { FacebookPixelProvider, useFacebookPixel, withFacebookPixel } from './provider';
 
 export type { TrackableEventName, AdditionalEventData, InitProps, EventData };

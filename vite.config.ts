@@ -19,7 +19,7 @@ export default defineConfig({
     },
     sourcemap: true,
     rollupOptions: {
-      external: [],
+      external: ['react', 'react-dom', 'react/jsx-runtime'],
     },
   },
 });

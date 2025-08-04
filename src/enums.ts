@@ -1,3 +1,6 @@
+/**
+ * https://developers.facebook.com/docs/meta-pixel/reference
+ */
 export enum TrackableEventNameEnum {
   /**
    *  When payment information is added in the checkout flow.
