@@ -1,6 +1,6 @@
 {
   "name": "react-use-facebook-pixel",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Type-safe wrapper for integrating Facebook Pixel",
   "license": "MIT",
   "repository": {
@@ -18,11 +18,14 @@
       "require": "./dist/index.cjs.js"
     }
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "prepare": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "facebook",
